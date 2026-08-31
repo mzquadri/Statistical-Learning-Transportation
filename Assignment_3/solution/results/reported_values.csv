@@ -1,0 +1,127 @@
+problem,metric,value,note
+1.1,gradient_check_max_rel_error,5.096971201668568e-09,"central differences, eps=1e-6"
+1.1,autograd_max_abs_diff,2.7755575615628914e-17,PyTorch float64 cross-check
+1.1,test_majority_baseline,0.5333333333333333,majority-class accuracy on the 60 test points
+1.1,default_final_train_loss,0.6902789821851961,"lr=0.001, 20000 ep"
+1.1,default_train_accuracy,0.55,lr=0.001
+1.1,default_test_accuracy,0.38333333333333336,lr=0.001
+1.1,sweep_best_learning_rate,10.0,lowest final training loss
+1.1,sweep_best_test_accuracy,0.7833333333333333,lr=10.0
+1.2,l2_gradient_check_max_rel_error,8.624360785863453e-09,central differences
+1.2,l2_autograd_max_abs_diff,1.1102230246251565e-16,PyTorch float64
+1.2,bo_learning_rate,2.222702497368282,BO optimum
+1.2,bo_alpha,0.00037486791892474524,BO optimum
+1.2,bo_g,-0.37116973046047774,log10 of CV cross-entropy
+1.2,bo_L_cv,0.42543211375925116,raw CV cross-entropy
+1.2,bo_runtime_s,324.3291953000007,50 evaluations
+1.2,rs_learning_rate,1.246878665907564,random-search optimum
+1.2,rs_alpha,0.00042980418362864256,random-search optimum
+1.2,rs_L_cv,0.42519548374195937,raw CV cross-entropy
+1.2,bo_evals_in_good_region,16.0,g <= -0.34
+1.2,bo_guided_evals_in_good_region,15.0,of 34 guided iterations
+1.2,rs_evals_in_good_region,6.0,g <= -0.34
+1.2,basinB_slope_logalpha_vs_logeta,-0.052527087879354256,constant product = -1
+1.2,basinB_slope_r2,0.012293747556473056,
+1.2,basinB_alpha_spread_factor,1.3318583981660785,
+1.2,basinB_product_spread_factor,1.896496662396909,
+1.2,norm_W_alpha0,50.58922130078844,"lr=1.0, alpha=0"
+1.2,norm_W_alpha3em4,23.593287129400625,lr=1.0
+1.2,bo_test_accuracy,0.7833333333333333,retrained on all 140 train points
+1.2,bo_test_bce,0.451842302245116,
+1.2,rs_test_accuracy,0.8,
+2.1,n_raw,176719.0,rows in the supplied CSV
+2.1,n_excluded_outside_period,79.0,
+2.1,n_retained,176640.0,
+2.1,n_timesteps,17664.0,"15-min slots, May-Oct 2023"
+2.1,n_locations,10.0,
+2.1,n_demand_entries,353280.0,time x location x channel
+2.1,n_missing_demand,5814.0,"row exists, value NaN"
+2.1,pct_observed,0.9835427989130435,
+2.1,xloc_pickup_corr,0.6832639516560283,"mean pairwise, off-diagonal"
+2.1,pickup_dropoff_corr,0.7042313913853985,mean within location
+2.1,autocorr_lag1,0.9146701536578729,15 min
+2.1,autocorr_lag96,0.826181492507903,1 day
+2.1,autocorr_lag672,0.7685517216497558,1 week
+2.1,train_mean_pickup,41.8660307175426,May-August
+2.1,test_mean_pickup,46.418336058871624,October
+2.1,pct_timesteps_any_channel_missing,0.09861865942028986,
+2.1,n_features,44.0,20 demand + 20 flags + 4 calendar
+2.1,n_train,11781.0,forecasting windows
+2.1,n_val,2877.0,forecasting windows
+2.1,n_test,2973.0,forecasting windows
+2.1,n_straddling_dropped,6.0,
+2.1,lookback,24.0,15-min steps = 6 hours
+2.1,horizon,4.0,15-min steps = 1 hour
+2.1,n_leakage_checks_passed,10.0,all assertions
+2.2,val_persistence_mae,8.623514001806685,"baseline, validation"
+2.2,val_persistence_rmse,13.199464485044848,"baseline, validation"
+2.2,val_seasonal_mae,16.665027100271004,"baseline, validation"
+2.2,val_seasonal_rmse,26.518620122261236,"baseline, validation"
+2.2,val_historical_mae,11.265914163152328,"baseline, validation"
+2.2,val_historical_rmse,18.39148750022876,"baseline, validation"
+2.2,provisional_lookback,12.0,pass 1
+2.2,selected_lookback,24.0,LSTM sweep minimum
+2.2,lookback_gap_to_runner_up,0.06944312324964841,validation MAE
+2.2,val_mlp_mae,7.5071859516999675,validation
+2.2,val_mlp_rmse,10.959005627759414,validation
+2.2,mlp_params,148752.0,
+2.2,val_1dcnn_mae,7.996870685794258,validation
+2.2,val_1dcnn_rmse,11.680769042570155,validation
+2.2,1dcnn_params,83696.0,
+2.2,val_lstm_mae,6.679830654753794,validation
+2.2,val_lstm_rmse,10.120292381979286,validation
+2.2,lstm_params,99408.0,
+2.2,seed_gap_top2,0.8440562032487149,mean validation MAE difference
+2.2,seed_pooled_sd,0.040514290638192535,
+2.2,outage_slots,331.0,contiguous >=24 h low run
+2.2,outage_in_train,0.0,
+2.2,outage_in_test,0.0,
+2.2,selected_model_params,99408.0,LSTM
+2.2,best_epoch,9.0,early stopping on validation loss
+2.2,val_selected_mae,6.679830654753794,LSTM
+2.2,val_selected_rmse,10.120292381979286,LSTM
+2.2,test_mae,6.687998492292142,LSTM
+2.2,test_rmse,9.847460992775455,LSTM
+2.2,test_bias,-0.4760193847320984,LSTM
+2.2,test_mae_h1,6.443821423372912,+15 min
+2.2,test_mae_h2,6.667241688247231,+30 min
+2.2,test_mae_h3,6.760836825609995,+45 min
+2.2,test_mae_h4,6.880094031938429,+60 min
+2.2,test_lstm_mae,6.687998492292142,October
+2.2,test_lstm_bias,-0.4760193847320984,October
+2.2,test_persistence_mae,9.761395067125896,October
+2.2,test_persistence_bias,-0.002630264266681561,October
+2.2,test_seasonal_mae,9.74096246594373,October
+2.2,test_seasonal_bias,-1.2891429509865502,October
+2.2,test_historical_mae,8.276568792843355,October
+2.2,test_historical_bias,-4.523435891248131,October
+3.1,discounted_return,-3.569,"route 7-8-5-2-3, gamma = 0.9"
+3.2,n_actions_node5,4.0,admissible moves
+3.2,n_actions_node6,3.0,admissible moves
+3.2,n_actions_node9,2.0,admissible moves
+3.3,v1_node1,-4.0,after sweep 1
+3.3,v2_node1,-5.0,after sweep 2
+3.3,v1_node2,1.0,after sweep 1
+3.3,v2_node2,-1.3333333333333333,after sweep 2
+3.3,v1_node3,0.0,after sweep 1
+3.3,v2_node3,0.0,after sweep 2
+3.3,v1_node4,-3.0,after sweep 1
+3.3,v2_node4,-6.666666666666667,after sweep 2
+3.3,v1_node5,-3.0,after sweep 1
+3.3,v2_node5,-4.5,after sweep 2
+3.3,v1_node6,-1.0,after sweep 1
+3.3,v2_node6,-3.0,after sweep 2
+3.3,v1_node7,-4.0,after sweep 1
+3.3,v2_node7,-7.0,after sweep 2
+3.3,v1_node8,-3.0,after sweep 1
+3.3,v2_node8,-6.333333333333333,after sweep 2
+3.3,v1_node9,-3.0,after sweep 1
+3.3,v2_node9,-5.0,after sweep 2
+3.4,n_states_not_optimal,1.0,greedy(v2) vs value iteration
+3.4,n_states_reaching_goal,6.0,of 8 non-terminal states
+4.1,cross_correlation_value,30.0,every entry of the 2x2 output
+4.1,true_convolution_value,-30.0,kernel rotated 180 degrees
+4.2,n_verification_cases,81.0,size x kernel x stride x padding
+4.2,max_diff_vs_reference,5.329070518200751e-15,vectorised vs naive loops
+4.3,kx_mean_abs_response,0.17355879028619506,Sobel X
+4.3,ky_mean_abs_response,0.14406916633755554,Sobel Y

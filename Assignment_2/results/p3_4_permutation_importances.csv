@@ -1,0 +1,7 @@
+,Decision tree,Random forest,Gradient boosting
+peak_hour,0.0035,0.041,0.0445
+rain,0.0605,0.0891,0.0787
+major_incident,0.1448,0.132,0.1181
+critical_hub,0.0,0.0153,0.0223
+current_delay_min,0.1462,0.1353,0.1204
+passenger_load,0.0,0.0412,0.0375

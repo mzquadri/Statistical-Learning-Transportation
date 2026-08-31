@@ -1,0 +1,5 @@
+,accuracy,precision,recall,F1-score,ROC-AUC
+Decision tree,0.8472,0.8537,0.4167,0.56,0.8469
+Random forest,0.8528,0.7627,0.5357,0.6294,0.8972
+Gradient boosting,0.8583,0.7797,0.5476,0.6434,0.881
+Baseline (majority class),0.7667,0.0,0.0,0.0,0.5

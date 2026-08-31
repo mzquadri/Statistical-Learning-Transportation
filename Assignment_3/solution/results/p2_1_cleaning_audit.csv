@@ -1,0 +1,7 @@
+step,rows
+raw file as supplied,176719
+excluded: timestamp outside the May-October 2023 study period,79
+retained: inside the study period,176640
+"excluded: duplicate (datetime, location_id) keys",0
+"excluded: negative, non-integer or infinite demand",0
+"excluded: extreme demand values (peak-hour demand, retained by design)",0

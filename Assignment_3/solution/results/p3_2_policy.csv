@@ -1,0 +1,10 @@
+state,action,pi(a|s),"P(s'|s,a)",P(s'|s) under pi,reward
+5,move to 2,1/4,1.0,1/4,-3
+5,move to 4,1/4,1.0,1/4,-1
+5,move to 6,1/4,1.0,1/4,-5
+5,move to 8,1/4,1.0,1/4,-3
+6,move to 3,1/3,1.0,1/3,7
+6,move to 5,1/3,1.0,1/3,-5
+6,move to 9,1/3,1.0,1/3,-5
+9,move to 6,1/2,1.0,1/2,-5
+9,move to 8,1/2,1.0,1/2,-1

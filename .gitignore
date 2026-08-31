@@ -1,0 +1,29 @@
+# --- Files still carrying the matriculation number -------------------------
+# These are kept locally but never published: the number is baked into the
+# rendered page (no .tex source to rebuild from) or into archived copies of
+# the pre-redaction files.
+Assignment_1/Problem_Set_1_Report.pdf
+**/submission/
+Assignment_3/Problem_Set_3_Submission.zip
+
+# --- LaTeX build artefacts -------------------------------------------------
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Local tooling ---------------------------------------------------------
+.claude/
+.DS_Store
+Thumbs.db

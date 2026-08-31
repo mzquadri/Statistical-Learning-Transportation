@@ -1,0 +1,6 @@
+,eigenvalue (raw),cumulative (raw),eigenvalue (log TrvlTime),cumulative (log TrvlTime)
+PC1,1.7248,0.345,1.725,0.345
+PC2,1.2668,0.5983,1.2812,0.6013
+PC3,0.9867,0.7957,0.9815,0.7976
+PC4,0.6386,0.9234,0.6343,0.9244
+PC5,0.3831,1.0,0.378,1.0

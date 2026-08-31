@@ -1,0 +1,17 @@
+preprocessing,study-period restriction; causal forward fill; per-channel imputation flags; per location x channel standardisation fitted on May-August; cyclical time-of-day and day-of-week
+lookback,24
+horizon,4
+architecture,LSTM
+n_features,44
+n_outputs,80
+parameters,99408
+optimizer,Adam
+learning_rate,0.001
+batch_size,64
+max_epochs,60
+early_stopping,"validation masked MSE, patience 8, best checkpoint restored"
+best_epoch,9
+loss,masked MSE on standardised targets
+postprocessing,clip at 0
+seed,42
+protocol,A: validation-selected checkpoint trained on May-August only
