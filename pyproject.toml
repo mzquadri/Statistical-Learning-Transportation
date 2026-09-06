@@ -1,0 +1,19 @@
+[project]
+name = "statistical-learning-transportation"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+# CI runs 3.11. Without this, syntax that only parses on a newer interpreter
+# passes locally and fails there.
+target-version = "py311"
+
+# Lint only what was written after submission. The notebooks and the two mlp.py
+# files are the submitted work and the course's own skeleton; reformatting them
+# to a house style would change what was handed in, which is the one thing this
+# repository must not do.
+include = ["scripts/**/*.py", "tests/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "C4", "SIM", "RUF", "FURB"]

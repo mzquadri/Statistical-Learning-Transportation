@@ -1,0 +1,691 @@
+{
+  "generated_utc": "2026-09-06T23:29:01Z",
+  "note": "post-submission verification; no submitted number is changed",
+  "totals": {
+    "checks": 66,
+    "passed": 66
+  },
+  "by_assignment": {
+    "Problem Set 1": {
+      "checks": 12,
+      "passed": 12
+    },
+    "Problem Set 2": {
+      "checks": 26,
+      "passed": 26
+    },
+    "Problem Set 3": {
+      "checks": 28,
+      "passed": 28
+    }
+  },
+  "report_binding": {
+    "available": true,
+    "registry_values": 126,
+    "quoted_in_the_report": 126,
+    "not_found_verbatim": []
+  },
+  "failed": [],
+  "checks": [
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.1",
+      "claim": "21 vehicles in the sample",
+      "reported": 21.0,
+      "recomputed": 21.0,
+      "tolerance": 0,
+      "source": "data_problem_3.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.1",
+      "claim": "R-squared about 0.89",
+      "reported": 0.89,
+      "recomputed": 0.8932869769034442,
+      "tolerance": 0.006,
+      "source": "OLS refit of mpg on six predictors",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.3",
+      "claim": "F-test p-value 4.66e-06",
+      "reported": 4.66e-06,
+      "recomputed": 4.663951412790762e-06,
+      "tolerance": 0.002,
+      "source": "OLS refit",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.4",
+      "claim": "exactly two predictors significant at 5 percent",
+      "reported": 2.0,
+      "recomputed": 2.0,
+      "tolerance": 0,
+      "source": "significant: axle, etw",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.4",
+      "claim": "etw is one of them",
+      "reported": 1.0,
+      "recomputed": 1.0,
+      "tolerance": 0,
+      "source": "OLS refit",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "3.4",
+      "claim": "axle is the other",
+      "reported": 1.0,
+      "recomputed": 1.0,
+      "tolerance": 0,
+      "source": "OLS refit",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.1",
+      "claim": "speed and speed_down correlate around 0.87",
+      "reported": 0.87,
+      "recomputed": 0.8674533659769149,
+      "tolerance": 0.006,
+      "source": "data_problem_4.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.1",
+      "claim": "flow and occupancy correlate 0.994",
+      "reported": 0.994,
+      "recomputed": 0.9938907607020661,
+      "tolerance": 0.002,
+      "source": "data_problem_4.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.2",
+      "claim": "VIF of flow is 104.24",
+      "reported": 104.23727,
+      "recomputed": 104.2372659423759,
+      "tolerance": 1e-05,
+      "source": "variance_inflation_factor",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.2",
+      "claim": "VIF of occupancy is 94.88",
+      "reported": 94.88128,
+      "recomputed": 94.8812790659399,
+      "tolerance": 1e-05,
+      "source": "variance_inflation_factor",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.2",
+      "claim": "VIF of speed_down is 2.10",
+      "reported": 2.0965,
+      "recomputed": 2.096501428741605,
+      "tolerance": 0.0001,
+      "source": "variance_inflation_factor",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 1",
+      "problem": "4.2",
+      "claim": "VIF of flow_ratio is 9.12",
+      "reported": 9.11658,
+      "recomputed": 9.116576726536305,
+      "tolerance": 1e-05,
+      "source": "variance_inflation_factor",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "Model 1 log-likelihood recovered from its BIC",
+      "reported": -47870.609,
+      "recomputed": -47870.60917412711,
+      "tolerance": 1e-05,
+      "source": "BIC = -2 lnL + k ln n",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "Model 1 AIC",
+      "reported": 95753.218,
+      "recomputed": 95753.21834825422,
+      "tolerance": 1e-06,
+      "source": "AIC = -2 lnL + 2k",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "Model 2 log-likelihood recovered from its BIC",
+      "reported": -48492.783,
+      "recomputed": -48492.78264510593,
+      "tolerance": 1e-05,
+      "source": "BIC = -2 lnL + k ln n",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "Model 2 AIC",
+      "reported": 96995.565,
+      "recomputed": 96995.56529021186,
+      "tolerance": 1e-06,
+      "source": "AIC = -2 lnL + 2k",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "likelihood-ratio statistic 1244.35 on 1 df",
+      "reported": 1244.35,
+      "recomputed": 1244.3480000000127,
+      "tolerance": 1e-05,
+      "source": "2(lnL1 - lnL2)",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "odds ratio 2.751 per additional vehicle",
+      "reported": 2.751,
+      "recomputed": 2.751097711911613,
+      "tolerance": 0.001,
+      "source": "exp of the HHVeh coefficient",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "odds ratio 1.799 over 600 minutes",
+      "reported": 1.799,
+      "recomputed": 1.7993041377176164,
+      "tolerance": 0.001,
+      "source": "exp(600 * TrvlTime coefficient)",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.1",
+      "claim": "HHVeh coefficient moves 17.39 percent between models",
+      "reported": 17.3913,
+      "recomputed": 17.3913,
+      "tolerance": 0.0001,
+      "source": "p1_1_coefficient_shift.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.3",
+      "claim": "eigenvalues sum to K = 5 with ddof = 1",
+      "reported": 5.0,
+      "recomputed": 5.000000000000001,
+      "tolerance": 1e-09,
+      "source": "p1_3_variance_explained.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.3",
+      "claim": "first three components explain 79.57 percent",
+      "reported": 0.795658,
+      "recomputed": 0.795658,
+      "tolerance": 1e-06,
+      "source": "p1_3_variance_explained.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "1.3",
+      "claim": "the reported ddof = 0 total would be 5.0010",
+      "reported": 5.001,
+      "recomputed": 5.001000200040008,
+      "tolerance": 0.0001,
+      "source": "n/(n-1) with n = 5000",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.1",
+      "claim": "split A weighted entropy",
+      "reported": 0.784159,
+      "recomputed": 0.7841590000000002,
+      "tolerance": 1e-06,
+      "source": "p3_1_split_criteria.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.1",
+      "claim": "split A weighted Gini",
+      "reported": 0.361111,
+      "recomputed": 0.361111,
+      "tolerance": 1e-06,
+      "source": "p3_1_split_criteria.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.1",
+      "claim": "split B weighted entropy",
+      "reported": 0.503487,
+      "recomputed": 0.50348725,
+      "tolerance": 1e-06,
+      "source": "p3_1_split_criteria.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.1",
+      "claim": "split B weighted Gini",
+      "reported": 0.238095,
+      "recomputed": 0.23809508333333332,
+      "tolerance": 1e-06,
+      "source": "p3_1_split_criteria.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.2",
+      "claim": "expected unique observations 3160.79",
+      "reported": 3160.79,
+      "recomputed": 3160.7867491930147,
+      "tolerance": 1e-05,
+      "source": "n(1 - (1 - 1/n)^n)",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.2",
+      "claim": "expected out-of-bag observations 1839.21",
+      "reported": 1839.21,
+      "recomputed": 1839.2132508069856,
+      "tolerance": 1e-05,
+      "source": "n(1 - 1/n)^n",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "1200 incidents in total",
+      "reported": 1200.0,
+      "recomputed": 1200.0,
+      "tolerance": 0,
+      "source": "p3_4_class_balance.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "severe share 23.42 percent",
+      "reported": 23.42,
+      "recomputed": 23.416666666666668,
+      "tolerance": 0.001,
+      "source": "p3_4_class_balance.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "class imbalance about 3.27 to 1",
+      "reported": 3.27,
+      "recomputed": 3.2704626334519573,
+      "tolerance": 0.002,
+      "source": "p3_4_class_balance.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "F1 at threshold default 0.5",
+      "reported": 0.6294,
+      "recomputed": 0.6293567313616759,
+      "tolerance": 0.001,
+      "source": "2PR/(P+R) from the reported precision and recall",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "F1 at threshold selected 0.440",
+      "reported": 0.6494,
+      "recomputed": 0.6493338831615121,
+      "tolerance": 0.001,
+      "source": "2PR/(P+R) from the reported precision and recall",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "F1 of the decision tree",
+      "reported": 0.56,
+      "recomputed": 0.5600390270780857,
+      "tolerance": 0.002,
+      "source": "p3_4_test_metrics.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "F1 of the random forest",
+      "reported": 0.6294,
+      "recomputed": 0.6293567313616759,
+      "tolerance": 0.002,
+      "source": "p3_4_test_metrics.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "F1 of the gradient boosting",
+      "reported": 0.6434,
+      "recomputed": 0.643356769381451,
+      "tolerance": 0.002,
+      "source": "p3_4_test_metrics.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 2",
+      "problem": "3.4",
+      "claim": "the majority-class baseline scores 0.5 ROC-AUC",
+      "reported": 0.5,
+      "recomputed": 0.5,
+      "tolerance": 0,
+      "source": "p3_4_test_metrics.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "1.1",
+      "claim": "finite-difference gradient check is at most 1e-6",
+      "reported": 0.0,
+      "recomputed": 5.096971201668568e-09,
+      "tolerance": 1e-06,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "1.1",
+      "claim": "autograd cross-check at float64 machine precision",
+      "reported": 0.0,
+      "recomputed": 2.775557561562892e-17,
+      "tolerance": 1e-12,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "1.2",
+      "claim": "the L2 gradient check is also at most 1e-6",
+      "reported": 0.0,
+      "recomputed": 8.624360785863453e-09,
+      "tolerance": 1e-06,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "1.1",
+      "claim": "the sweep's best learning rate is the one reported",
+      "reported": 10.0,
+      "recomputed": 10.0,
+      "tolerance": 1e-09,
+      "source": "p1_1_lr_sweep.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "2.1",
+      "claim": "retained rows equal raw minus excluded",
+      "reported": 176640.0,
+      "recomputed": 176640.0,
+      "tolerance": 0,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.1",
+      "claim": "discounted return of the given route",
+      "reported": -3.569,
+      "recomputed": -3.569,
+      "tolerance": 1e-06,
+      "source": "sum of gamma^k r_k recomputed from p3_1_return.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.1",
+      "claim": "the step table's own contributions sum to the same return",
+      "reported": -3.569,
+      "recomputed": -3.569,
+      "tolerance": 1e-06,
+      "source": "p3_1_return.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 1 after sweep 1",
+      "reported": -4.0,
+      "recomputed": -4.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 1 after sweep 2",
+      "reported": -5.0,
+      "recomputed": -5.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 2 after sweep 1",
+      "reported": 1.0,
+      "recomputed": 1.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 2 after sweep 2",
+      "reported": -1.3333333333333333,
+      "recomputed": -1.3333333333333333,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 3 after sweep 1",
+      "reported": 0.0,
+      "recomputed": 0.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 3 after sweep 2",
+      "reported": 0.0,
+      "recomputed": 0.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 4 after sweep 1",
+      "reported": -3.0,
+      "recomputed": -3.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 4 after sweep 2",
+      "reported": -6.666666666666667,
+      "recomputed": -6.666666666666667,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 5 after sweep 1",
+      "reported": -3.0,
+      "recomputed": -3.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 5 after sweep 2",
+      "reported": -4.5,
+      "recomputed": -4.5,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 6 after sweep 1",
+      "reported": -1.0,
+      "recomputed": -1.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 6 after sweep 2",
+      "reported": -3.0,
+      "recomputed": -3.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 7 after sweep 1",
+      "reported": -4.0,
+      "recomputed": -4.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 7 after sweep 2",
+      "reported": -7.0,
+      "recomputed": -7.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 8 after sweep 1",
+      "reported": -3.0,
+      "recomputed": -3.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 8 after sweep 2",
+      "reported": -6.333333333333333,
+      "recomputed": -6.333333333333333,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 9 after sweep 1",
+      "reported": -3.0,
+      "recomputed": -3.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "3.3",
+      "claim": "state 9 after sweep 2",
+      "reported": -5.0,
+      "recomputed": -5.0,
+      "tolerance": 1e-09,
+      "source": "p3_3_policy_evaluation.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "4.1",
+      "claim": "true convolution is the negated cross-correlation",
+      "reported": -30.0,
+      "recomputed": -30.0,
+      "tolerance": 0,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "4.2",
+      "claim": "from-scratch convolution matches the reference to 1e-12",
+      "reported": 0.0,
+      "recomputed": 5.3290705182007506e-15,
+      "tolerance": 1e-12,
+      "source": "reported_values.csv",
+      "passed": true
+    },
+    {
+      "assignment": "Problem Set 3",
+      "problem": "4.2",
+      "claim": "81 verification cases were run",
+      "reported": 81.0,
+      "recomputed": 81.0,
+      "tolerance": 0,
+      "source": "reported_values.csv",
+      "passed": true
+    }
+  ]
+}
