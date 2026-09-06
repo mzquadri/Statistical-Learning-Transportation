@@ -1,0 +1,56 @@
+name: Repository check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      # Deliberately not the assignment requirements files. Those pin what the
+      # notebooks need, including PyTorch; nothing here executes a notebook, so
+      # installing a deep-learning stack to check a CSV would be waste.
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas scipy scikit-learn statsmodels pymupdf ruff
+
+      - name: Lint the post-submission scripts
+        run: ruff check .
+
+      # Recomputes the reports' claims from the committed artifacts: refits the
+      # Problem Set 1 regressions from the raw CSVs, re-derives the closed forms
+      # in Problem Set 2, and checks the Problem Set 3 registry against its
+      # result tables and against the report PDF.
+      - name: Verify the reported results
+        run: python scripts/verify_results.py --out /tmp/verification.json
+
+      - name: Fail if the recorded verification moved
+        run: |
+          python - <<'PY'
+          import json
+          recorded = json.load(open("verification/verification.json"))
+          fresh = json.load(open("/tmp/verification.json"))
+          for key in ("totals", "by_assignment", "failed"):
+              if recorded[key] != fresh[key]:
+                  raise SystemExit(f"  {key} changed against the committed record")
+          if recorded["report_binding"]["quoted_in_the_report"] != \
+             fresh["report_binding"]["quoted_in_the_report"]:
+              raise SystemExit("  the report binding changed")
+          print("  the committed verification still reproduces")
+          PY
+
+      - name: Tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Verify the README against verification/verification.json
+        run: python scripts/check_repository.py
