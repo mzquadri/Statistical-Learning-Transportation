@@ -1,0 +1,22 @@
+# Problem Set 1 - Mohd Zamin Quadri
+# Python 3.9 or newer (the stored outputs were produced on 3.13.5)
+#
+# Third-party packages imported by Problem_Set_1_Notebook.ipynb.
+#
+# Install with:  python -m pip install -r requirements.txt
+
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+seaborn>=0.12
+scipy>=1.10
+scikit-learn>=1.3
+
+# OLS summaries, F and t tests, and variance_inflation_factor.
+# See the README: the VIF reported for the constant column changed between
+# statsmodels versions. The four predictor VIFs are unaffected.
+statsmodels>=0.14
+
+# Needed only to execute the notebook, not by the analysis code itself.
+jupyter>=1.0
+nbconvert>=7.0
