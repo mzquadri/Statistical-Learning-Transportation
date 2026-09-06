@@ -13,20 +13,22 @@ vector machines, decision trees, bagging, random forests and gradient boosting.
 ## Directory structure
 
 ```
-Solution/
-├── Problem_Set_2_Notebook.ipynb    Executed notebook — all code, outputs and figures
-├── Problem_Set_2_Report.pdf        Written report (26 pages) — the main deliverable
+Assignment_2/
+├── Problem_Set_2_Notebook.ipynb    Executed notebook, all code, outputs and figures
+├── Problem_Set_2_Report.pdf        Written report (26 pages), the main deliverable
 ├── Problem_Set_2_Report.tex        LaTeX source of the report
+├── Stats_PS2.pdf                   The problem sheet, the chair's own material
 ├── README.md                       This file
 ├── requirements.txt                Python packages required to run the notebook
 ├── data/
-│   └── mode_choice_pcasample.csv   Survey sample for Problem 1.3 (5000 × 6)
+│   └── mode_choice_pcasample.csv   Survey sample for Problem 1.3 (5000 x 6)
 ├── figures/                        18 PNG figures written by the notebook
 └── results/                        22 CSV result tables written by the notebook
 ```
 
-The `data/` copy of `mode_choice_pcasample.csv` is identical to the file supplied with the
-assignment; the original in the parent folder is untouched.
+`data/mode_choice_pcasample.csv` is the file supplied with the assignment, unmodified.
+It is kept only there: a second copy alongside the problem sheet would be the same bytes
+twice.
 
 ---
 
@@ -64,7 +66,7 @@ python -m pip install -r requirements.txt
 
 ## How to run
 
-From inside the `Solution/` folder:
+From inside this folder:
 
 ```bash
 # Option 1 — run headless and write the outputs back into the notebook
@@ -80,7 +82,7 @@ its outputs already stored, so it does not need to be re-run in order to be read
 **File paths.** No absolute paths appear anywhere in the notebook. The dataset is located by
 a small helper, `find_data()`, which searches `data/`, the notebook's own folder, and the
 parent folder in that order. The notebook therefore also runs correctly if it is placed
-directly in the `Assignment 2/` folder next to `mode_choice_pcasample.csv` — this was
+directly next to `mode_choice_pcasample.csv`, which was
 tested explicitly. Figures and result tables are written to `figures/` and `results/`,
 which are created automatically if they do not exist.
 

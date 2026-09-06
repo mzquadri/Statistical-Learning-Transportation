@@ -11,7 +11,7 @@ forecasting, Markov decision processes, and 2-D convolution.
 |---|---|
 | `Problem_Set_3_Report.pdf` | The report, covering Problems 1–4 |
 | `Problem_Set_3_Notebook.ipynb` | All code, executed, with outputs stored |
-| `mlp.py` | The supplied MLP skeleton with the missing parts completed (Problem 1) |
+| `mlp.py` | The supplied MLP skeleton with the missing parts completed (Problem 1). The untouched skeleton is kept one level up, at `../mlp.py`, so the two can be diffed |
 | `data/nyc-yellow-may2oct.csv` | Demand data for Problem 2, as supplied with the assignment |
 | `requirements.txt` | Packages needed to run the notebook |
 | `results/` | Every table the notebook writes, including `reported_values.csv` |
@@ -20,9 +20,10 @@ forecasting, Markov decision processes, and 2-D convolution.
 problem they belong to, so any figure in the PDF can be checked against the notebook
 one value at a time.
 
-The notebook also writes its plots to `figures/`. That folder is not included in the
-archive, because all seven figures are already embedded in the report PDF and both
-folders are recreated automatically when the notebook runs.
+The notebook also writes its plots to `figures/`. That folder was left out of the
+submitted archive, because all seven figures are already embedded in the report PDF
+and the folder is recreated when the notebook runs. It is kept in this repository so
+the figures can be viewed without opening the PDF.
 
 ## Running the notebook
 

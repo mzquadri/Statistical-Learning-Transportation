@@ -24,6 +24,14 @@ __pycache__/
 venv/
 
 # --- Local tooling ---------------------------------------------------------
+# Editor and assistant working directories, none of which belong in the repo.
 .claude/
+.cursor/
+.idea/
+.vscode/
 .DS_Store
 Thumbs.db
+
+# --- Post-submission checks ------------------------------------------------
+.ruff_cache/
+__pycache__/
