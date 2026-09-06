@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="616" viewBox="0 0 1020 616" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#9aa4b0"/>
+    </marker>
+    <style>
+      .set   { font-size: 14px; font-weight: 600; }
+      .topic { font-size: 11.6px; fill: #4b5563; }
+      .meta  { font-size: 10.8px; fill: #8b949e; }
+      .band  { font-size: 10.6px; font-weight: 600; fill: #9aa4b0; letter-spacing: .1em; }
+    </style>
+  </defs>
+
+  <rect width="1020" height="616" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="19" font-weight="600" fill="#1f2933">Three problem sets, one course</text>
+  <text x="40" y="65" font-size="12.6" fill="#4b5563">Statistical Learning and Data Analytics for Transportation Systems, TUM. Submitted work, checked again afterwards.</text>
+
+  <!-- ── PROBLEM SETS ──────────────────────────────────── -->
+  <text x="40" y="104" class="band">PROBLEM SETS</text>
+
+  <rect x="40" y="116" width="300" height="196" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="60" y="143" class="set" fill="#2563eb">Problem Set 1</text>
+  <text x="60" y="163" class="topic">Multiple linear regression</text>
+  <text x="60" y="181" class="topic">Significance and t-tests, 99% intervals</text>
+  <text x="60" y="199" class="topic">Residual diagnostics, prediction bands</text>
+  <text x="60" y="217" class="topic">Multicollinearity, ridge and lasso</text>
+  <text x="60" y="243" class="meta">Problems 3 and 4 of 4, coded</text>
+  <text x="60" y="261" class="meta">21 vehicles; 1,816 freeway intervals</text>
+  <text x="60" y="279" class="meta">notebook only: the report is withheld</text>
+  <text x="60" y="297" class="meta">12 claims rechecked</text>
+
+  <rect x="360" y="116" width="300" height="196" rx="9" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+  <text x="380" y="143" class="set" fill="#0d9488">Problem Set 2</text>
+  <text x="380" y="163" class="topic">Binomial logistic regression</text>
+  <text x="380" y="181" class="topic">Principal components analysis</text>
+  <text x="380" y="199" class="topic">Support vector machines, kernels</text>
+  <text x="380" y="217" class="topic">Trees, bagging, forests, boosting</text>
+  <text x="380" y="243" class="meta">3 problems, 45 code cells</text>
+  <text x="380" y="261" class="meta">5,000-respondent survey sample</text>
+  <text x="380" y="279" class="meta">26-page report, 18 figures, 22 tables</text>
+  <text x="380" y="297" class="meta">26 claims rechecked</text>
+
+  <rect x="680" y="116" width="300" height="196" rx="9" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+  <text x="700" y="143" class="set" fill="#d97706">Problem Set 3</text>
+  <text x="700" y="163" class="topic">MLP and backpropagation by hand</text>
+  <text x="700" y="181" class="topic">Bayesian optimisation of two knobs</text>
+  <text x="700" y="199" class="topic">Taxi demand forecasting, LSTM</text>
+  <text x="700" y="217" class="topic">Markov decision processes; convolution</text>
+  <text x="700" y="243" class="meta">4 problems, 57 code cells</text>
+  <text x="700" y="261" class="meta">176,719 NYC yellow-taxi records</text>
+  <text x="700" y="279" class="meta">17-page report, 7 figures, 22 tables</text>
+  <text x="700" y="297" class="meta">28 claims rechecked</text>
+
+  <path d="M190,312 L190,340 L510,340 L510,366" stroke="#9aa4b0" stroke-width="1.5" fill="none"/>
+  <path d="M510,312 L510,366" stroke="#9aa4b0" stroke-width="1.5" fill="none"/>
+  <path d="M830,312 L830,340 L510,340 L510,366" stroke="#9aa4b0" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <!-- ── ARTIFACTS ─────────────────────────────────────── -->
+  <text x="40" y="392" class="band">WHAT EACH ONE LEAVES BEHIND</text>
+  <rect x="40" y="404" width="940" height="72" rx="9" fill="#f7f8fa" stroke="#d7dce2" stroke-width="1.5"/>
+  <text x="60" y="430" class="set" fill="#1f2933">An executed notebook, and every table and figure its report cites</text>
+  <text x="60" y="450" class="topic">Nothing is transcribed by hand. Problem Set 3 also records all 126 numbers its report quotes, next to the cell that produced each one.</text>
+  <text x="60" y="467" class="meta">Problem Set 1 is the exception: it writes no tables, so its numbers live only in the notebook's stored outputs.</text>
+
+  <path d="M510,476 L510,506" stroke="#9aa4b0" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <!-- ── VERIFICATION ──────────────────────────────────── -->
+  <text x="40" y="532" class="band">RECHECKED AFTERWARDS</text>
+  <rect x="40" y="544" width="940" height="52" rx="9" fill="#ffffff" stroke="#1f2933" stroke-width="1.8"/>
+  <text x="60" y="568" class="set" fill="#1f2933">scripts/verify_results.py</text>
+  <text x="245" y="568" class="topic">refits the regressions from the raw data, re-derives the closed forms, and compares each result with what the report says</text>
+  <text x="60" y="586" class="meta">Post-submission only. No submitted number is changed; where a recheck disagreed with the submission, the disagreement is recorded rather than edited away.</text>
+</svg>
