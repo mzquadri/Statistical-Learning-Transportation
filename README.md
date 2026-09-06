@@ -79,11 +79,29 @@ Re-execution was checked for Problem Sets 1 and 2. Problem Set 2 is exact: all
 newer scikit-learn than the one that produced them. Problem Set 1 reproduces
 except for the single value below.
 
-Problem Set 3 was not re-executed end to end for this check. It needs hours on
-CPU, and its own notebook already records the one place it does not reproduce
-exactly: `Conv1d` backward on CUDA accumulates with atomics, so the 1-D CNN
-lands within about 0.03 validation MAE. The selected model is an LSTM, which
-reproduces exactly, and no reported test figure depends on the CNN.
+Problem Set 3 was re-executed end to end on a different PyTorch backend than
+the one that produced it: CPU under `torch 2.11.0+xpu`, against the CUDA machine
+the notebook was written on. Nine of its 23 tables come back byte-identical, and
+they are exactly the ones that involve no training: the whole of the data
+cleaning and splitting in Problem 2.1, the frozen-pipeline record, and all four
+Markov decision process tables in Problem 3.
+
+The trained models move. On the sealed October test set the LSTM gives a mean
+absolute error of 6.722 against the 6.688 in the report, a difference of half a
+percent, while all three baselines are byte-identical because none of them
+trains anything. The conclusion is unchanged: the LSTM still beats persistence,
+the seasonal naive and the historical average by the same wide margin.
+
+The validation-stage tables move more, because they compare configurations that
+were close to begin with and a small shift reorders near-ties. The notebook
+already warns about this for the 1-D CNN, which lands within about 0.03
+validation MAE because `Conv1d` backward accumulates with atomics; running on a
+different backend widens that to the whole training path rather than the CNN
+alone.
+
+None of this is a defect. It is what neural network training does across
+hardware, and it is the reason Problem Set 3 records the numbers it quotes in a
+registry rather than relying on a re-run to confirm them.
 
 ### One value that no longer reproduces
 

@@ -57,7 +57,16 @@ weights are seeded at construction rather than inside the training loop, so resu
 do not depend on how many cells ran beforehand. One caveat is documented in the
 notebook: `Conv1d` backward on CUDA accumulates with atomics, so the 1-D CNN
 reproduces only to about 0.03 in validation MAE. The selected model is an LSTM,
-which reproduces exactly, and no reported test figure depends on the CNN.
+which reproduces exactly on the same machine, and no reported test figure depends
+on the CNN.
+
+Across *different* PyTorch backends the trained results move a little more. A
+re-run on CPU under `torch 2.11.0+xpu` reproduced nine of the 23 result tables
+byte-identically, and those nine are exactly the ones with no training in them:
+all of Problem 2.1, the frozen-pipeline record and all four Problem 3 tables. The
+LSTM's test MAE came out 6.722 against the 6.688 reported, half a percent apart,
+with all three baselines identical. The ordering on the test set is unchanged.
+See the repository root README for the full comparison.
 
 ## Note on Problem 1.2
 
