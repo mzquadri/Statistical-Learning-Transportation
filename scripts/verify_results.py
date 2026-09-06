@@ -393,14 +393,19 @@ def report_binding() -> dict:
     reader can see the coverage rather than take it on trust.
     """
     try:
-        import fitz
+        # The package renamed itself; `fitz` still works but warns that it will
+        # not for long.
+        try:
+            import pymupdf
+        except ImportError:
+            import fitz as pymupdf
     except ImportError:
         return {"available": False,
                 "note": "PyMuPDF is not installed; report binding not checked"}
 
     values = registry()
     text = "".join(page.get_text()
-                   for page in fitz.open(A3 / "Problem_Set_3_Report.pdf"))
+                   for page in pymupdf.open(A3 / "Problem_Set_3_Report.pdf"))
     # LaTeX sets a real minus sign (U+2212), not a hyphen, and the thousands
     # separators are in the PDF but not in the registry. Both are normalised so
     # a value like -47,870.609 can be matched against -47870.609.
@@ -477,7 +482,13 @@ def main() -> int:
                   f"recomputed {entry['recomputed']}")
         raise SystemExit(f"\n  {len(result['failed'])} checks failed")
 
-    print(f"  wrote {arguments.out.relative_to(ROOT).as_posix()}")
+    # --out can point outside the repository, which CI does, so the path is
+    # only shortened when it actually sits underneath it.
+    try:
+        where = arguments.out.relative_to(ROOT).as_posix()
+    except ValueError:
+        where = arguments.out.as_posix()
+    print(f"  wrote {where}")
     return 0
 
 
