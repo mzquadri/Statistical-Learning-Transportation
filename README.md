@@ -1,5 +1,15 @@
 # Statistical Learning and Data Analytics for Transportation Systems
 
+<!-- project-story:start -->
+<p align="center"><img src="docs/assets/architecture-animated.svg" alt="Animated architecture diagram of this project" width="100%"></p>
+
+| Problem | Why it mattered | Result |
+|---|---|---|
+| Coursework reports leave out the runs that embarrassed you. | Results should be regenerated, not pasted. | **1 point** between random search and Bayesian optimisation, on 60 test points |
+
+[See it animated on mzquadri.de](https://mzquadri.de/work/statistical-learning)
+<!-- project-story:end -->
+
 Coursework for *Statistical Learning and Data Analytics for Transportation
 Systems*, M.Sc. Mathematics in Science and Engineering, Technical University of
 Munich, Chair of Transportation Systems Engineering. Three graded problem sets,
